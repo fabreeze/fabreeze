@@ -14,6 +14,10 @@
 # 
 # [git syntax tutorial](http://nbviewer.ipython.org/github/demotu/BMC/blob/master/notebooks/VersionControlGitGitHub.ipynb)
 
+# <markdowncell>
+
+# file location: http://www.github.com/fabreeze/fabreeze.git
+
 # <codecell>
 
 #### Entry 1
