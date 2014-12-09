@@ -42,7 +42,15 @@
 # <codecell>
 
 %load_ext version_information
+
+# <codecell>
+
 %version_information
+
+# <codecell>
+
+%%bash 
+git commit -m "
 
 # <codecell>
 
