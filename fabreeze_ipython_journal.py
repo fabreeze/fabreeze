@@ -34,20 +34,15 @@
 
 # #### Useful extensions
 
-# <codecell>
+# <markdowncell>
 
-%install_ext http://raw.github.com/jrjohansson/version_information/master/version_information.py
+# Version Information Extension
+# > %install_ext http://raw.github.com/jrjohansson/version_information/master/version_information.py
 
 # <codecell>
 
 %load_ext version_information
 %version_information
-
-# <codecell>
-
-%%bash
-git add journal.ipynb
-git commit
 
 # <codecell>
 
