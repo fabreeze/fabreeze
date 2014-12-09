@@ -16,12 +16,32 @@
 
 # <markdowncell>
 
-# file location: http://www.github.com/fabreeze/fabreeze.git
+# To clone this repo: <br>
+# > git clone http://www.github.com/fabreeze/fabreeze.git
+
+# <markdowncell>
+
+# To install ipython notebook
+# > sudo apt-get install python-pip <br>
+# > pip install "ipython[all]"
+
+# <markdowncell>
+
+# To start an ipython session: 
+# > ipython notebook --script
+
+# <markdowncell>
+
+# #### Useful extensions
 
 # <codecell>
 
-#### Entry 1
-!date
+%install_ext http://raw.github.com/jrjohansson/version_information/master/version_information.py
+
+# <codecell>
+
+%load_ext version_information
+%version_information
 
 # <codecell>
 
