@@ -47,10 +47,20 @@
 
 %version_information
 
+# <markdowncell>
+
+# #### Saving changes to github
+
 # <codecell>
 
 %%bash 
-git commit -m "
+git commit -a -m "saving notebook"
+git push origin master
+
+# <codecell>
+
+%%bash
+git push origin master
 
 # <codecell>
 
