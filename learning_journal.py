@@ -21,7 +21,7 @@
 
 # <markdowncell>
 
-# #### Saving changes to github
+# #### Saving changes to github (check terminal to input UN/PW)
 
 # <codecell>
 
@@ -63,7 +63,26 @@ git push origin master
 
 # <markdowncell>
 
-# ## Codeacademy
+# ## [Codeacademy](http://www.codecademy.com/en/tracks/python)
+
+# <markdowncell>
+
+# ##### pig latin module
+
+# <codecell>
+
+original = raw_input("input word:")
+word = original.lower()
+first = word[0]
+piglatin = word[1:len(word)]+first+"ay"
+if len(original)>0 and original.isalpha():
+    print piglatin
+else:
+    print "empty"
+
+# <markdowncell>
+
+# Try to adapt for protocol writing
 
 # <codecell>
 
