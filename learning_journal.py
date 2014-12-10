@@ -30,10 +30,18 @@
 git commit -a -m "saving notebook"
 git push origin master
 
+# <markdowncell>
+
+# ### Save and hard reset local to mirror remote 
+# [how-to source](http://stackoverflow.com/questions/1628088/how-to-reset-my-local-repository-to-be-just-like-the-remote-repository-head)
+
 # <codecell>
 
-### Save and hard reset local to mirror remote 
-[how-to source]()
+%%bash
+git commit -a -m "Saving my work, just in case"
+git branch my-saved-work
+git fetch origin
+git reset --hard origin/master
 
 # <markdowncell>
 
