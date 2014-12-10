@@ -176,4 +176,8 @@ print n % 3
 
 # <codecell>
 
+abs(n)
+
+# <codecell>
+
 
