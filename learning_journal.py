@@ -77,6 +77,15 @@ git reset --hard origin/master
 
 # <markdowncell>
 
+# ### Learning Resources
+# 
+# [IPython Tips and Tricks from Radiometry Community](http://nbviewer.ipython.org/github/NelisW/ComputationalRadiometry/blob/master/01-IPythonHintsAndTips.ipynb)
+
+# <codecell>
+
+
+# <markdowncell>
+
 # ## [Codeacademy](http://www.codecademy.com/en/tracks/python)
 
 # <markdowncell>
@@ -102,6 +111,37 @@ else:
 
 # [Mistune](https://github.com/lepture/mistune) is a fast Markdown parser
 # > pip install mistune
+
+# <codecell>
+
+import mistune
+
+mistune.markdown('I am using **markdown**')
+
+
+# <codecell>
+
+mistune.Renderer('<p>I am using <strong>markdown</strong></p>\n')
+
+# <codecell>
+
+import mistune
+from pygments import highlight
+from pygments.lexers import get_lexer_by_name
+from pygments.formatters import HtmlFormatter
+
+class MyRenderer(mistune.Renderer):
+    def block_code(self, code, lang):
+        if not lang:
+            return '\n<pre><code>%s</code></pre>\n' % \
+                mistune.escape(code)
+        lexer = get_lexer_by_name(lang, stripall=True)
+        formatter = HtmlFormatter()
+        return highlight(code, lexer, formatter)
+
+renderer = MyRenderer()
+md = mistune.Markdown(renderer=renderer)
+print(md.render('Some **Markdown** text.'))
 
 # <codecell>
 
