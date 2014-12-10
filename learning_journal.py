@@ -77,6 +77,32 @@ git reset --hard origin/master
 
 # <markdowncell>
 
+# ### Tools
+
+# <markdowncell>
+
+# ##### Dynamic display output (python, markdown, html mix)
+
+# <markdowncell>
+
+# [Mistune](https://github.com/lepture/mistune) is a fast Markdown parser
+# > pip install mistune
+
+# <codecell>
+
+import mistune # pip install mistune
+from IPython.display import display, HTML 
+display(HTML(mistune.markdown(
+### begin write area. You need """ for multiline strings
+"""
+markdown code goes **here**
+"""
+
+### end   write area
+))) #end display & html tags
+
+# <markdowncell>
+
 # ### Learning Resources
 # 
 # [IPython Tips and Tricks from Radiometry Community](http://nbviewer.ipython.org/github/NelisW/ComputationalRadiometry/blob/master/01-IPythonHintsAndTips.ipynb)
@@ -108,42 +134,12 @@ else:
 
 # Try to adapt for protocol writing
 
-# <markdowncell>
-
-# [Mistune](https://github.com/lepture/mistune) is a fast Markdown parser
-# > pip install mistune
-
 # <codecell>
 
 import mistune
 
 mistune.markdown('I am using **markdown**')
 
-
-# <markdowncell>
-
-# ##### Dynamic display output (python, markdown, html mix)
-
-# <codecell>
-
-from IPython.display import display, HTML 
-var=31
-display(HTML(mistune.markdown(
-### begin write area. You need """ for multiline strings
-"""
-# Example   
- 1. one
- 2. two
- 3. three <br>
-~~some break~~
-"""
-
-"""
- 4. four
-"""
-
-### end   write area
-))) #end display & html tags
 
 # <markdowncell>
 
