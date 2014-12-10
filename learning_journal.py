@@ -98,6 +98,11 @@ else:
 
 # Try to adapt for protocol writing
 
+# <markdowncell>
+
+# [Mistune](https://github.com/lepture/mistune) is a fast Markdown parser
+# > pip install mistune
+
 # <codecell>
 
 
