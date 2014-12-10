@@ -43,7 +43,7 @@ git push origin master
 # <codecell>
 
 %%bash
-git commit -a -m "Saving my work, just in case"
+git commit -a -m "Saving work, just in case"
 git branch savedwork
 git fetch origin
 git reset --hard origin/master
@@ -98,7 +98,7 @@ HTML('<iframe src=https://praw.readthedocs.org/en/v2.1.19/pages/getting_started.
 
 import praw
 import pprint
-user_agent = ("PRAW tutorial examples bot 0.1 by /u/fabreeze"
+user_agent = ("PRAW karma breakdown bot 0.1 by /u/fabreeze"
               "github.com/fabreeze/fabreeze")
 r = praw.Reddit(user_agent=user_agent)
 # Breaking down redditor karma by subreddit excercise
@@ -112,6 +112,40 @@ for thing in gen:
     karma_by_subreddit[subreddit] = (karma_by_subreddit.get(subreddit, 0)
                                      + thing.score)
 pprint.pprint(karma_by_subreddit)
+
+# <markdowncell>
+
+# FIN.
+
+# <codecell>
+
+from IPython.display import HTML
+HTML('<iframe src=https://praw.readthedocs.org/en/v2.1.19/pages/writing_a_bot.html width=700 height=350></iframe>')
+
+# <markdowncell>
+
+# ### Example 2: persistent bot
+
+# <codecell>
+
+import time
+import praw
+import pprint
+username = 'fabreeze'
+r = praw.Reddit("PRAW tutorial example2 monitor bot 0.1 by /u/fabreeze"
+              "github.com/fabreeze/fabreeze")
+r.login(username) # syntax: r.login('username','password') | in this case, pw is prompted in terminal
+already_done = []
+
+#while TRUE:
+    #subreddit = r.get_subreddit('learnpython')
+    #for submission in subreddit.get_hot(limit=10):
+submission = r.get_submission(submission_id = "105aru")
+pprint.pprint(vars(submission))
+
+# <codecell>
+
+qtconsole
 
 # <codecell>
 

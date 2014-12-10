@@ -95,11 +95,28 @@ from IPython.display import display, HTML
 display(HTML(mistune.markdown(
 ### begin write area. You need """ for multiline strings
 """
-markdown code goes **here**
+* this is 
+* multi-line
+* markdown code
 """
 
 ### end   write area
 ))) #end display & html tags
+
+# <markdowncell>
+
+# ### discover and SSH into local network machine
+# [source](http://askubuntu.com/questions/305229/whats-the-best-way-to-ssh-to-machines-on-the-local-network)
+
+# <codecell>
+
+%%bash
+sudo brew install avahi-utils
+
+# <codecell>
+
+%%bash
+avahi-browse -tl _workstation._tcp
 
 # <markdowncell>
 
@@ -132,25 +149,12 @@ else:
 
 # <markdowncell>
 
-# Try to adapt for protocol writing
-
-# <codecell>
-
-import mistune
-
-mistune.markdown('I am using **markdown**')
-
-
-# <markdowncell>
-
-# original = raw_input("input word:")
-# word = original.lower()
-# first = word[0]
-# piglatin = word[1:len(word)]+first+"ay"
-# if len(original)>0 and original.isalpha():
-#     print piglatin
-# else:
-#     print "empty"
+# ##### Anatomy of a function
+# <pre>
+# <b>def</b> name(x): 
+#     """ doc string describes function """ 
+#     x = "does something" 
+#     print x </pre>
 
 # <codecell>
 
