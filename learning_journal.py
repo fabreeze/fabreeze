@@ -81,8 +81,9 @@ git reset --hard origin/master
 # 
 # [IPython Tips and Tricks from Radiometry Community](http://nbviewer.ipython.org/github/NelisW/ComputationalRadiometry/blob/master/01-IPythonHintsAndTips.ipynb)
 
-# <codecell>
+# <markdowncell>
 
+# [python for econometrics, stats and data analysis](https://www.kevinsheppard.com/images/0/09/Python_introduction.pdf)
 
 # <markdowncell>
 
@@ -119,29 +120,41 @@ import mistune
 mistune.markdown('I am using **markdown**')
 
 
+# <markdowncell>
+
+# ##### Dynamic display output (python, markdown, html mix)
+
 # <codecell>
 
-mistune.Renderer('<p>I am using <strong>markdown</strong></p>\n')
+from IPython.display import display, HTML 
+var=31
+display(HTML(mistune.markdown(
+### begin write area. You need """ for multiline strings
+"""
+# Example   
+ 1. one
+ 2. two
+ 3. three <br>
+~~some break~~
+"""
 
-# <codecell>
+"""
+ 4. four
+"""
 
-import mistune
-from pygments import highlight
-from pygments.lexers import get_lexer_by_name
-from pygments.formatters import HtmlFormatter
+### end   write area
+))) #end display & html tags
 
-class MyRenderer(mistune.Renderer):
-    def block_code(self, code, lang):
-        if not lang:
-            return '\n<pre><code>%s</code></pre>\n' % \
-                mistune.escape(code)
-        lexer = get_lexer_by_name(lang, stripall=True)
-        formatter = HtmlFormatter()
-        return highlight(code, lexer, formatter)
+# <markdowncell>
 
-renderer = MyRenderer()
-md = mistune.Markdown(renderer=renderer)
-print(md.render('Some **Markdown** text.'))
+# original = raw_input("input word:")
+# word = original.lower()
+# first = word[0]
+# piglatin = word[1:len(word)]+first+"ay"
+# if len(original)>0 and original.isalpha():
+#     print piglatin
+# else:
+#     print "empty"
 
 # <codecell>
 
