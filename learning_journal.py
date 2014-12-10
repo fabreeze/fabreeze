@@ -21,13 +21,19 @@
 
 # <markdowncell>
 
-# #### Saving changes to github (check terminal to input UN/PW)
+# ### Save and commit changes to remove repository (github) 
+# check terminal to input UN/PW
 
 # <codecell>
 
 %%bash 
 git commit -a -m "saving notebook"
 git push origin master
+
+# <codecell>
+
+### Save and hard reset local to mirror remote 
+[how-to source]()
 
 # <markdowncell>
 
