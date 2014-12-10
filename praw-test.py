@@ -19,6 +19,11 @@
 # To clone this repo: <br>
 # > git clone http://www.github.com/fabreeze/fabreeze.git
 
+# <codecell>
+
+%%bash
+git add praw-test.ipynb praw-test.py
+
 # <markdowncell>
 
 # ### Save and commit changes to remove repository (github) 
@@ -78,7 +83,35 @@ git reset --hard origin/master
 # <codecell>
 
 from IPython.display import HTML
-HTML('<iframe src=https://praw.readthedocs.org/en/v2.1.19/ width=700 height=350></iframe>')
+HTML('<iframe src=https://praw.readthedocs.org/en/v2.1.19/pages/getting_started.html width=700 height=350></iframe>')
+
+# <markdowncell>
+
+# ** Install PRAW**
+# > pip install praw
+
+# <markdowncell>
+
+# ### Example 1: redditor karma by subreddit
+
+# <codecell>
+
+import praw
+import pprint
+user_agent = ("PRAW tutorial examples bot 0.1 by /u/fabreeze"
+              "github.com/fabreeze/fabreeze")
+r = praw.Reddit(user_agent=user_agent)
+# Breaking down redditor karma by subreddit excercise
+user_name = "fabreeze"
+user = r.get_redditor(user_name)
+thing_limit = 10
+gen = user.get_submitted(limit=thing_limit)
+karma_by_subreddit = {}
+for thing in gen:
+    subreddit = thing.subreddit.display_name
+    karma_by_subreddit[subreddit] = (karma_by_subreddit.get(subreddit, 0)
+                                     + thing.score)
+pprint.pprint(karma_by_subreddit)
 
 # <codecell>
 
