@@ -21,7 +21,17 @@
 
 # <markdowncell>
 
-# To install ipython notebook
+# #### Saving changes to github
+
+# <codecell>
+
+%%bash 
+git commit -a -m "saving notebook"
+git push origin master
+
+# <markdowncell>
+
+# #### To install ipython notebook
 # > sudo apt-get install python-pip <br>
 # > pip install "ipython[all]"
 
@@ -47,34 +57,13 @@
 
 %version_information
 
-# <markdowncell>
-
-# #### Saving changes to github
-
-# <codecell>
-
-%%bash 
-git commit -a -m "saving notebook"
-git push origin master
-
-# <codecell>
-
-%%bash
-git push origin master
-
 # <codecell>
 
 !date
 
-# <codecell>
+# <markdowncell>
 
-%%bash
-git commit -a -m "saving"
-
-# <codecell>
-
-%%bash
-git push origin master
+# ## Codeacademy
 
 # <codecell>
 
