@@ -69,5 +69,13 @@ git push origin master
 # <codecell>
 
 %%bash
-git 
+git commit -a -m "saving"
+
+# <codecell>
+
+%%bash
+git push origin master
+
+# <codecell>
+
 
