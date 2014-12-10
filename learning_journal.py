@@ -154,7 +154,25 @@ else:
 # <b>def</b> name(x): 
 #     """ doc string describes function """ 
 #     x = "does something" 
-#     print x </pre>
+#     return x </pre>
+
+# <codecell>
+
+def cube(number):
+    return number**3
+
+def by_three(number):
+    if number % 3:
+        return False
+    else:
+        return cube(number)
+
+by_three(9)
+
+# <codecell>
+
+n = 30
+print n % 3
 
 # <codecell>
 
