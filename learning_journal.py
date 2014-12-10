@@ -39,7 +39,7 @@ git push origin master
 
 %%bash
 git commit -a -m "Saving my work, just in case"
-git branch my-saved-work
+git branch savedwork
 git fetch origin
 git reset --hard origin/master
 
